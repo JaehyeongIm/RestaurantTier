@@ -2,82 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>건메추</title>
+    <title>맛집텨</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../static/bootstrap.min.css">
     <script src="/homeScript.js"></script>
-    <link rel="stylesheet" type="text/css" href="/bootstrap.min.css">
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="/home-style.css">
-    <link rel="stylesheet" type="text/css" href="/navbar-style.css">
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 
-    <script src="https://code.jquery.com/jquery-3.7.1.js"
-            integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
 </head>
 <body>
-<!--상단 탭 fragment 붙여넣기-->
-<header th:replace="~{navbar :: navbarFragment}"></header>
 
 <!--상단 배너 -->
-<!--<header class="container-fluid m-0 p-0">-->
-<!--    &lt;!&ndash; 홈페이지 이름과 로그인 버튼  &ndash;&gt;-->
-<!--    <div id="header1" style="background-color: #28344E">-->
-<!--        <nav class="navbar" style="margin:0; padding:0;">-->
-<!--            <div class="container-fluid" style="margin:0; padding:0;">-->
-<!--                &lt;!&ndash; '홈' 버튼 &ndash;&gt;-->
-<!--                <a id="home" class="navbar-brand p-2" href="/home">-->
-<!--                    건메추-->
-<!--                </a>-->
-
-<!--                &lt;!&ndash; '로그인' 버튼 &ndash;&gt;-->
-<!--                <a id="login" class="btn btn-primary p-1 me-1" href="/login">-->
-<!--                    로그인-->
-<!--                </a>-->
+<header class="container-fluid m-0 p-0">
+    <!-- 홈페이지 이름과 로그인 버튼  -->
+    <div id="header1"  style="background-color: #28344E">
+        <nav class="navbar" style="margin:0; padding:0;">
+            <div class="container-fluid" style="margin:0; padding:0;">
+                <button id="home" class="navbar-brand p-2" type="button">
+                    건메추
+                </button>
+                <button id="login" class="btn btn-primary p-1 me-1" type="button"
+                >로그인
+                </button>
 
 
-<!--            </div>-->
-<!--        </nav>-->
-<!--    </div>-->
+            </div>
+        </nav>
+    </div>
 
-<!--    &lt;!&ndash;  상단 탭 &ndash;&gt;-->
-<!--    <ul id="header2" class="nav nav-underline">-->
-<!--        <li class="nav-item ps-3">-->
-<!--            <a class="nav-link" aria-current="page" href="/home">홈</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item">-->
-<!--            <a class="nav-link" href="/tier">티어표</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item">-->
-<!--            <a class="nav-link" href="#">순위</a>-->
-<!--        </li>-->
-<!--        <li class="nav-item">-->
-<!--            <a class="nav-link" href="/talk">커뮤니티</a>-->
-<!--        </li>-->
-<!--    </ul>-->
-<!--    <aside id="header3">-->
-<!--        <div class="container-fluid m-0 p-2">-->
-<!--            <div>-->
-<!--                최신 공지사항-->
-<!--                <button type="button" onclick="closeBanner()">X</button>-->
-<!--            </div>-->
-<!--        </div>-->
-<!--    </aside>-->
-<!--    <div class="row mt-5 mb-5">-->
-<!--        <div class="col-12">-->
-<!--            <form class="d-flex justify-content-center">-->
-<!--                <div class="col-md-6 me-2">-->
-<!--                    <input class="form-control" type="search" placeholder="검색어 입력"-->
-<!--                           aria-label="Search">-->
-<!--                </div>-->
-<!--                <div class="col-md-1">-->
-<!--                    <button class="btn" type="submit">검색-->
-<!--                    </button>-->
-<!--                </div>-->
+    <!--  상단 탭 -->
+    <ul id="header2" class="nav nav-underline">
+        <li class="nav-item ps-3">
+            <a class="nav-link" aria-current="page" href="/home">홈</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/tier">티어표</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">순위</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="/talk">커뮤니티</a>
+        </li>
+    </ul>
+    <aside id="header3">
+        <div class="container-fluid m-0 p-2">
+            <div>
+                최신 공지사항
+                <button type="button" onclick="closeBanner()">X</button>
 
-<!--            </form>-->
-<!--        </div>-->
-<!--    </div>-->
+            </div>
 
-<!--</header>-->
+        </div>
+    </aside>
+    <div class="row mt-5 mb-5">
+        <div class="col-12">
+            <form class="d-flex justify-content-center">
+                <div class="col-md-6 me-2">
+                    <input class="form-control" type="search" placeholder="검색어 입력"
+                           aria-label="Search">
+                </div>
+                <div class="col-md-1">
+                    <button class="btn" type="submit">검색
+                    </button>
+                </div>
+
+            </form>
+        </div>
+    </div>
+
+</header>
 
 <!-- 하단 메인 컨텐츠 -->
 <main class="container-fluid p-0 m-0">
@@ -95,117 +91,80 @@
             <div class="row row-cols-3 p-2">
 
                 <div class="cell col position-relative">
-                    <a class="cell-button col-12 p-0"><img class="img col-12"
-                                                           th:src="@{/home-images/bibimbap.png}">
-                        <div class="label position-absolute top-0 start-0">한식
-                        </div>
-                    </a>
-
+                    <button type="button" class="cell-button col-12 p-0"><img class="img col-12" th:src="@{/home-images/bibimbap.png}">
+                    </button>
+                    <div class="label position-absolute top-0 start-0">한식
+                    </div>
                 </div>
                 <div class="cell col position-relative">
-                    <a class="cell-button col-12 p-0">
-                        <img class="img col-12" th:src="@{/home-images/tonkatsu.png}">
-                        <div class="label position-absolute top-0 start-0">일식
-                        </div>
-
-                    </a>
+                    <button type="button" class="cell-button col-12 p-0 position-relative"><img class="img col-12"
+                                                                                                th:src="@{/home-images/tonkatsu.png}"></button>
+                    <div class="label position-absolute top-0 start-0">일식
+                    </div>
                 </div>
                 <div class="cell col position-relative">
-                    <a class="cell-button col-12 p-0"><img class="img col-12" th:src="@{/home-images/jajangmyeon.png}">
-                        <div class="label position-absolute top-0 start-0">중식
-                        </div>
-                    </a>
-
+                    <button type="button" class="cell-button col-12 p-0"><img class="img col-12" th:src="@{/home-images/jajangmyeon.png}"></button>
+                    <div class="label position-absolute top-0 start-0">중식
+                    </div>
                 </div>
                 <div class="cell col position-relative">
-                    <a class="cell-button col-12 p-0 "><img class="img col-12"
-                                                            th:src="@{/home-images/spaguetti.png}">
-                        <div class="label position-absolute top-0 start-0">양식
-                        </div>
-                    </a>
-
+                    <button type="button" class="cell-button col-12 p-0 "><img class="img col-12" th:src="@{/home-images/spaguetti.png}"></button>
+                    <div class="label position-absolute top-0 start-0">양식
+                    </div>
                 </div>
                 <div class="cell col position-relative">
-                    <a class="cell-button col-12 p-0"><img class="img col-12"
-                                                           th:src="@{/home-images/ricenoodles.png}">
-                        <div class="label position-absolute top-0 start-0">아시안
-                        </div>
-                    </a>
-
+                    <button type="button" class="cell-button col-12 p-0"><img class="img col-12" th:src="@{/home-images/ricenoodles.png}"></button>
+                    <div class="label position-absolute top-0 start-0">아시안
+                    </div>
                 </div>
                 <div class="cell col position-relative">
-                    <a class="cell-button col-12 p-0 "><img class="img col-12"
-                                                            th:src="@{/home-images/fast-food.png}">
-                        <div class="label position-absolute top-0 start-0">햄버거/피자
-                        </div>
-                    </a>
-
+                    <button type="button" class="cell-button col-12 p-0 "><img class="img col-12" th:src="@{/home-images/fast-food.png}"></button>
+                    <div class="label position-absolute top-0 start-0">햄버거/피자
+                    </div>
                 </div>
                 <div class="cell col position-relative">
-                    <a class="cell-button col-12 p-0"><img class="img col-12"
-                                                           th:src="@{/home-images/tteokbokki.png}">
-                        <div class="label position-absolute top-0 start-0">분식
-                        </div>
-                    </a>
-
+                    <button type="button" class="cell-button col-12 p-0"><img class="img col-12" th:src="@{/home-images/tteokbokki.png}"></button>
+                    <div class="label position-absolute top-0 start-0">분식
+                    </div>
                 </div>
                 <div class="cell col position-relative">
-                    <a class="cell-button col-12 p-0"><img class="img col-12"
-                                                           th:src="@{/home-images/meat.png}">
-                        <div class="label position-absolute top-0 start-0">고기
-                        </div>
-                    </a>
-
+                    <button type="button" class="cell-button col-12 p-0"><img class="img col-12" th:src="@{/home-images/meat.png}"></button>
+                    <div class="label position-absolute top-0 start-0">고기
+                    </div>
                 </div>
                 <div class="cell col position-relative">
-                    <a class="cell-button col-12 p-0"><img class="img col-12"
-                                                           th:src="@{/home-images/fried-chicken.png}">
-                        <div class="label position-absolute top-0 start-0">치킨
-                        </div>
-                    </a>
-
+                    <button type="button" class="cell-button col-12 p-0"><img class="img col-12" th:src="@{/home-images/chicken-leg.png}"></button>
+                    <div class="label position-absolute top-0 start-0">치킨
+                    </div>
                 </div>
                 <div class="cell col position-relative">
-                    <a class="cell-button col-12 p-0"><img class="img col-12"
-                                                           th:src="@{/home-images/shrimp.png}">
-                        <div class="label position-absolute top-0 start-0">해산물
-                        </div>
-                    </a>
-
+                    <button type="button" class="cell-button col-12 p-0"><img class="img col-12" th:src="@{/home-images/shrimp.png}"></button>
+                    <div class="label position-absolute top-0 start-0">해산물
+                    </div>
                 </div>
                 <div class="cell col position-relative">
-                    <a class="cell-button col-12 p-0"><img class="img col-12"
-                                                           th:src="@{/home-images/beer.png}">
-                        <div class="label position-absolute top-0 start-0">술집
-                        </div>
-                    </a>
-
+                    <button type="button" class="cell-button col-12 p-0"><img class="img col-12" th:src="@{/home-images/beer.png}"></button>
+                    <div class="label position-absolute top-0 start-0">술집
+                    </div>
                 </div>
 
                 <div class="cell col position-relative">
-                    <a class="cell-button col-12 p-0"><img class="img col-12"
-                                                           th:src="@{/home-images/coffee.png}">
-                        <div class="label position-absolute top-0 start-0">카페/디저트
-                        </div>
-                    </a>
-
+                    <button type="button" class="cell-button col-12 p-0"><img class="img col-12" th:src="@{/home-images/coffee.png}"></button>
+                    <div class="label position-absolute top-0 start-0">카페/디저트
+                    </div>
                 </div>
                 <div class="cell col  position-relative">
-                    <a class="cell-button col-12 p-0 "><img class="img col-12"
-                                                            th:src="@{/home-images/bakery.png}">
-                        <div class="label position-absolute top-0 start-0">베이커리
-                        </div>
-                    </a>
-
+                    <button type="button" class="cell-button col-12 p-0 "><img class="img col-12" th:src="@{/home-images/bakery.png}"></button>
+                    <div class="label position-absolute top-0 start-0">베이커리
+                    </div>
                 </div>
                 <div class="cell col position-relative">
-                    <a class="cell-button col-12 p-0 "><img class="img col-12"
-                                                            th:src="@{/home-images/hot-dog.png}">
-                        <div class="label position-absolute top-0 start-0">기타
-                        </div>
-                    </a>
-
+                    <button type="button" class="cell-button col-12 p-0 "><img class="img col-12" th:src="@{/home-images/hot-dog.png}"></button>
+                    <div class="label position-absolute top-0 start-0">기타
+                    </div>
                 </div>
+
+
 
 
             </div>
