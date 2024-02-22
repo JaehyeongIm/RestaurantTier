@@ -243,7 +243,7 @@ public class CommunityController {
     }
 
 
-// 게시글 작성 화면 관련
+    // 게시글 작성 화면 관련
 
     // 커뮤니티 게시글 작성 화면
     @PreAuthorize("isAuthenticated() and hasRole('USER')")

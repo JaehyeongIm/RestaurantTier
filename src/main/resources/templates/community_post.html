@@ -184,7 +184,10 @@
                             </div>
                             <div class="comment-content">
                                 <div class="comment-name">
-                                    <img src="/img/community/sacred-cow.png">
+                                    <img th:if="${user.evaluationList.size()<=4}" src="/img/community/sacred-cow.png">
+                                    <img th:if="${user.evaluationList.size()>=5 and user.evaluationList.size()<10}" src="/img/community/오리.png">
+
+                                    <img th:if="${user.evaluationList.size()>=10}" src="/img/community/crown.png">
                                     <span class="user-name" th:text="${comment.user.userNickname}"></span>
                                     <span th:text="${comment.calculateTimeAgo()}"></span>
                                 </div>
@@ -235,7 +238,9 @@
                                     </div>
                                     <div class="comment-content">
                                         <div class="comment-name">
-                                            <img src="/img/community/sacred-cow.png">
+                                            <img th:if="${user.evaluationList.size()<=4}" src="/img/community/sacred-cow.png">
+                                            <img th:if="${user.evaluationList.size()>=5 and user.evaluationList.size()<10}" src="/img/community/오리.png">
+                                            <img th:if="${user.evaluationList.size()>=10}" src="/img/community/crown.png">
                                             <span class="user-name" th:text="${reply.user.userNickname}"></span>
                                             <span th:text="${reply.calculateTimeAgo()}"></span>
                                         </div>
