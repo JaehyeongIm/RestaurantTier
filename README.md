@@ -10,13 +10,3 @@
 * 참여자 : 김성운,심경보,임재형 (건국대 컴퓨터공학과 3인)
 * 기간 : 23.11~
 * 현재 코드를 Github Organization으로 이동하여 개발 진행중입니다. URL:https://github.com/kustaurant/BackEnd-integration
-
-
-
-## 정보
-
-임재형 – dlawogud517@gmail.com
-
-https://github.com/JaehyeongIm
-
-
